@@ -1,8 +1,15 @@
 <script>
-  import { value } from '../store/my_store'
+  import { hooked_event } from '$lib/store/hooked_event'
+  import { event } from '../store/event'
 
-  $: console.log($value)
+  $: console.log($event)
+  $: console.log($hooked_event)
 </script>
 
-<p>data from server:</p>
-<pre>{$value}</pre>
+<p>event from server:</p>
+<pre>{$event}</pre>
+
+<hr />
+
+<p>hooked event from server:</p>
+<pre>{$hooked_event}</pre>
